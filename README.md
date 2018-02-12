@@ -1,6 +1,6 @@
 # IMPORTANT
 
-This fork of Parcel only exists to test a [specific issue related to postcss-import](https://github.com/parcel-bundler/parcel/issues/329). It may not be up to date with other changes in the main Parcel repo. You probably don't use this branch in production.
+This fork of Parcel only exists to test a [specific issue related to postcss-import](https://github.com/parcel-bundler/parcel/issues/329). It may not be up to date with other changes in the main Parcel repo. You probably shouldn't use this branch in production.
 
 ---
 
