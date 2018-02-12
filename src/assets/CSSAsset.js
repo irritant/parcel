@@ -6,7 +6,7 @@ const CssSyntaxError = require('postcss/lib/css-syntax-error');
 
 const URL_RE = /url\s*\("?(?![a-z]+:)/;
 const IMPORT_RE = /@import/;
-const PROTOCOL_RE = /^[a-z]+:/;
+//const PROTOCOL_RE = /^[a-z]+:/;
 
 class CSSAsset extends Asset {
   constructor(name, pkg, options) {
@@ -28,6 +28,10 @@ class CSSAsset extends Asset {
   }
 
   collectDependencies() {
+    // Commenting out this block allows postcss-import to work
+    // properly, which fixes issues with other postcss plugins.
+    // See https://github.com/parcel-bundler/parcel/issues/329
+    /*
     this.ast.root.walkAtRules('import', rule => {
       let params = valueParser(rule.params).nodes;
       let [name, ...media] = params;
@@ -56,7 +60,7 @@ class CSSAsset extends Asset {
       rule.remove();
       this.ast.dirty = true;
     });
-
+    */
     this.ast.root.walkDecls(decl => {
       if (URL_RE.test(decl.value)) {
         let parsed = valueParser(decl.value);

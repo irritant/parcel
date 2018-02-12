@@ -1,3 +1,9 @@
+# IMPORTANT
+
+This fork of Parcel only exists to test a [specific issue related to postcss-import](https://github.com/parcel-bundler/parcel/issues/329). It may not be up to date with other changes in the main Parcel repo. You probably don't use this branch in production.
+
+---
+
 <p align="center">
   <a href="https://parceljs.org/" target="_blank">
     <img alt="Parcel" src="https://user-images.githubusercontent.com/19409/31321658-f6aed0f2-ac3d-11e7-8100-1587e676e0ec.png" width="749">
